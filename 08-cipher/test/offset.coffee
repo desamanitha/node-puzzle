@@ -13,6 +13,8 @@ describe '08-cipher/lib/offset', ->
     it 'should decrypt', ->
       assert.equal offset.decrypt('gdkkn sgdqd'), 'hello there'
 
+    it 'should decrypt handle null values', ->
+      assert.equal offset.decrypt(null), undefined
 
   describe 'custom secret', ->
 

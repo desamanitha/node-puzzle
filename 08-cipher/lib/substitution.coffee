@@ -4,10 +4,18 @@ alphabet1 = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
 exports.encrypt = (string) ->
-  #
-  # !!! Place your solition here !!!
-  #
-  return 'fix me'
+  result = ''
+  if string == null
+    return;
+  else
+    alphbet0Length = alphabet0.length
+    for char in string
+      index = alphabet1.indexOf char
+      if index < alphbet0Length - 1
+        result += alphabet0[index]
+      else
+       result += char
+  return result
 
 
 exports.decrypt = (string) ->

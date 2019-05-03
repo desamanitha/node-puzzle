@@ -14,9 +14,9 @@ exports.validate = (data) ->
 
     if !Array.isArray(data.interests) then return false
 
-    for interests in data.interests
+    for interest in data.interests
 
-        if interests.length > 31 or typeof interests != "string" then return false
+        if interest.length > 31 or typeof interest != "string" then return false
 
     if data.favouriteColour?
         favColour = data.favouriteColour.toUpperCase()
